@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite">
+  <test  name="Test">
+  <parameter name="browser" value="chrome"/>
+    <classes>
+    	<class name="test.CreateInvoice"/>
+      	<class name="test.CreateBankAccount"/>
+      	<class name="test.ManageAdjustment"/>
+      	<class name="test.AssetAquisition"/>
+      	<class name="test.AssetRetirements"/>
+      	<class name="test.JournalCreation"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

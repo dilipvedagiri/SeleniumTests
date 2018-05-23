@@ -1,0 +1,20 @@
+package test;
+
+import org.testng.annotations.Test;
+import com.aventstack.extentreports.Status;
+import pages.AssetAquisitionPage;
+
+public class AssetAquisition extends BaseTest
+{
+	@Test
+	public void testAssetAquisition() throws Exception
+	{
+		test=extent.createTest("AssetAquisition", "Executing Asset Aquisition Test");
+		AssetAquisitionPage assetaquisitionpage = new AssetAquisitionPage(driver);
+		test.log(Status.INFO, "Navigating to Add Assets");
+		assetaquisitionpage.NavigatetoAddAssets();
+		test.log(Status.INFO, "Enter the required fields in Add Assets");
+		assetaquisitionpage.Add_Assets();		
+	}
+
+}
