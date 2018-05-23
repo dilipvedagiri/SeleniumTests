@@ -7,13 +7,14 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
 import generics.Utility;
 
-public class LoginPage 
+/**
+ * @author dvedagiri
+ *
+ */
+public class LoginPage extends BasePage
 {
-	WebDriver driver;
 	@FindBy(id="userid")
 	private WebElement username;
 	
@@ -28,11 +29,10 @@ public class LoginPage
 	
 	public LoginPage(WebDriver driver)
 	{
-		PageFactory.initElements(driver, this);
+		super(driver);
 	}
 	public void Login() throws EncryptedDocumentException, InvalidFormatException, IOException 
 	{
-		//int rc = Utility.GetRowCount("./TestData/InputData.xlsx","Login");
 		String Username=Utility.GetCellValue("./TestData/InputData.xlsx","Login", 1, 0);
 		String Password=Utility.GetCellValue("./TestData/InputData.xlsx","Login", 1, 1);
 		System.out.println(Username);

@@ -4,6 +4,10 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import pages.AssetAquisitionPage;
 
+/**
+ * @author dvedagiri
+ *
+ */
 public class AssetAquisition extends BaseTest
 {
 	@Test

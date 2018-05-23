@@ -7,9 +7,12 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
 import generics.Utility;
 
+/**
+ * @author dvedagiri
+ *
+ */
 public class CreateBankAccountPage extends BasePage
 {
 	//Declaring Web Elements
@@ -162,13 +165,11 @@ public class CreateBankAccountPage extends BasePage
 		bankbranch.sendKeys(branch);
 		accountname.sendKeys(accname);
 		accountnumber.sendKeys(accnumber);
-		Select select= new Select(selectcurrency);
-		select.selectByVisibleText(currencyvalue);
+		SelectByVisibleText(selectcurrency, currencyvalue);
 		legalentityname.sendKeys(entityname);
 		payablescheckbox.click();
 		receivablescheckbox.click();
-		Thread.sleep(5000);
-		cashsearch.click();
+		Click(cashsearch);
 		Thread.sleep(6000);
 		//llusentitydropdown.click();
 		//llusentityvalue.click();
@@ -185,16 +186,13 @@ public class CreateBankAccountPage extends BasePage
 		cashclearing.sendKeys(cashvalue);
 		
 	}
-	public void BusinessUnitAccess() throws InterruptedException, EncryptedDocumentException, InvalidFormatException, IOException
+	public void BusinessUnitAccess() throws EncryptedDocumentException, InvalidFormatException, IOException 
 	{
 		String busnsunit=Utility.GetCellValue(xlpath, sheetname, 1, 9);
-		
-		Thread.sleep(5000);
-		businessunitaccess.click();
-		businessunitcreateicon.click();
+		Click(businessunitaccess);
+		Click(businessunitcreateicon);
 		businessunit.sendKeys(busnsunit);
-		businessunitokbtn.click();
-		
+		Click(businessunitokbtn);	
 	}
 	public void AddPaymentDocuments() throws InterruptedException, EncryptedDocumentException, InvalidFormatException, IOException
 	{
@@ -203,21 +201,17 @@ public class CreateBankAccountPage extends BasePage
 		String firstnum=Utility.GetCellValue(xlpath, sheetname, 1, 12);
 		String lastnum=Utility.GetCellValue(xlpath, sheetname, 1, 13);
 		
-		Thread.sleep(5000);
-		general.click();
-		Thread.sleep(3000);
-		paymentdocumentaddicon.click();
+		Click(general);
+		Click(paymentdocumentaddicon);
 		paymentdocument.sendKeys(paymntdoc);
 		format.sendKeys(formatvalue);
 		firstavailabledocnumber.sendKeys(firstnum);
 		lastavailabledocnumber.sendKeys(lastnum);
 		paymentdocokbtn.click();
 	}
-	public void Save_Validation() throws InterruptedException
+	public void Save_Validation()
 	{
-		Thread.sleep(5000);
-		SaveandClose.click();
-		Thread.sleep(3000);
-		InformationOk.click();
+		Click(SaveandClose);
+		Click(InformationOk);
 	}
 }

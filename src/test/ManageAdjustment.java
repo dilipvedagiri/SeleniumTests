@@ -4,6 +4,10 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import pages.ManageAdjustmentPage;
 
+/**
+ * @author dvedagiri
+ *
+ */
 public class ManageAdjustment extends BaseTest
 {
 	@Test

@@ -4,6 +4,10 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import pages.Receivables;
 
+/**
+ * @author dvedagiri
+ *
+ */
 public class CreateInvoice extends BaseTest
 {
 	@Test

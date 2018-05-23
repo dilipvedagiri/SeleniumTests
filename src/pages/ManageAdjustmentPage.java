@@ -10,6 +10,10 @@ import org.openqa.selenium.support.ui.Select;
 
 import generics.Utility;
 
+/**
+ * @author dvedagiri
+ *
+ */
 public class ManageAdjustmentPage extends BasePage
 {		
 	@FindBy(xpath="//*[@id='pt1:commandLink1']")
@@ -148,18 +152,13 @@ public class ManageAdjustmentPage extends BasePage
 		Select selecttype= new Select(adjustmenttype);
 		selecttype.selectByVisibleText(adjvalue);
 		adjustmentamount.sendKeys(adjamount);
-		Select selectreason= new Select(adjustmentreason);
-		selectreason.selectByVisibleText(reason);
+		SelectByVisibleText(adjustmentreason, reason);
 		submitbtn.click();
-		Thread.sleep(5000);
-		donebtn.click();
-		
+		Click(donebtn);	
 	}
 	public void View_Balance() throws InterruptedException
 	{
 		actions.click();
-		Thread.sleep(5000);
-		viewbalancedetails.click();
-		
+		Click(viewbalancedetails);
 	}
 }

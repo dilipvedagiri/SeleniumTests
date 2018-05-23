@@ -10,6 +10,10 @@ import org.openqa.selenium.support.FindBy;
 
 import generics.Utility;
 
+/**
+ * @author dvedagiri
+ *
+ */
 public class AssetAquisitionPage extends BasePage
 {
 	@FindBy(id="pt1:_UIShome::icon")
@@ -138,22 +142,17 @@ public class AssetAquisitionPage extends BasePage
 		country.sendKeys(cntry);
 		state.sendKeys(statevalue);
 		city.sendKeys(cityvalue);
-		Thread.sleep(3000);
-		cityVALUE.click();
-		Thread.sleep(3000);
-		locationok.click();
-		Thread.sleep(3000);
-		next.click();
+		Click(cityVALUE);
+		Click(locationok);
+		Click(next);
 		inservicedate.clear();
 		inservicedate.sendKeys(insrvcdate);
 		assertkey.sendKeys(assrtkey);
 		employeename.sendKeys(empname);
 		submit.click();
-		Thread.sleep(5000);
-		assetenquiry.click();
+		Click(assetenquiry);
 		Thread.sleep(3000);
 		descriptionenquiry.sendKeys(descenquiry);
-		Thread.sleep(3000);
-		assetenquirysearch.click();
+		Click(assetenquirysearch);
 	}
 }

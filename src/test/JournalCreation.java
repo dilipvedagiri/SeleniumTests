@@ -4,6 +4,10 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import pages.JournalCreationPage;
 
+/**
+ * @author dvedagiri
+ *
+ */
 public class JournalCreation extends BaseTest
 {
 	@Test

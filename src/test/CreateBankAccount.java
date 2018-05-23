@@ -4,6 +4,10 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import pages.CreateBankAccountPage;
 
+/**
+ * @author dvedagiri
+ *
+ */
 public class CreateBankAccount extends BaseTest 
 {
 	@Test

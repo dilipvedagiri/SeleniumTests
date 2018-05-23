@@ -9,6 +9,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import generics.Utility;
 
+/**
+ * @author dvedagiri
+ *
+ */
 public class JournalCreationPage extends BasePage
 {		
 	@FindBy(xpath="//*[@id='pt1:_UIShome::icon']")
@@ -131,24 +135,20 @@ public class JournalCreationPage extends BasePage
 		debitbalance.sendKeys(debitbalvalue);
 		debit.sendKeys(debitvalue);
 		debitdescription.sendKeys(debitdescvalue);
-		Thread.sleep(3000);
-		account.click();
+		Click(account);
 		Thread.sleep(3000);
 		creditbalance.sendKeys(creditbalvalue);
 		credit.sendKeys(creditvalue);
 		creditdescription.sendKeys(creditdescvalue);
 		savebtn.click();
-		Thread.sleep(3000);
-		complete.click();
+		Click(complete);
 		cancel.click();
 	}
 	public void Manage_Journal() throws InterruptedException, EncryptedDocumentException, InvalidFormatException, IOException
 	{
 		String journalname=Utility.GetCellValue(xlpath, sheetname, 1, 0);
-		Thread.sleep(5000);
-		tasks.click();
-		Thread.sleep(3000);
-		managejournals.click();
+		Click(tasks);
+		Click(managejournals);
 		Thread.sleep(3000);
 		journalbatch.sendKeys(journalname);
 		search.click();

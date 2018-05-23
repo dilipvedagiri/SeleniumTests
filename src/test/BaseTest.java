@@ -25,6 +25,10 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import generics.Screenshots;
 import pages.LoginPage;
 
+/**Base Test Containing initializing Extent Report Parameterise Browser and Log the Status of the Test to the report
+ * @author dvedagiri
+ *
+ */
 public class BaseTest 
 {
 	public ExtentReports extent;

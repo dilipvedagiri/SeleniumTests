@@ -6,6 +6,10 @@ import com.aventstack.extentreports.Status;
 
 import pages.AssetRetirementsPage;
 
+/**
+ * @author dvedagiri
+ *
+ */
 public class AssetRetirements extends BaseTest
 {
 	@Test

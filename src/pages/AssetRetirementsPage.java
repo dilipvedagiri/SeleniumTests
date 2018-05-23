@@ -7,7 +7,6 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
 import generics.Utility;
 
 public class AssetRetirementsPage extends BasePage
@@ -94,7 +93,7 @@ public class AssetRetirementsPage extends BasePage
 		super(driver);
 	}
 	
-	public void NavigatetoRetireAssets() throws InterruptedException
+	public void NavigatetoRetireAssets()
 	{
 		homePagelink.click();
 		Click(fixedassets);	
@@ -117,33 +116,20 @@ public class AssetRetirementsPage extends BasePage
 		Thread.sleep(3000);
 		costretired.sendKeys(costretiredvalue);
 		costofremoval.sendKeys(costremovalvalue);
-		Select select= new Select(retirementreason);
-		select.selectByVisibleText(retmntreason);
+		SelectByVisibleText(retirementreason, retmntreason);
 		submitbtn.click();
-		Thread.sleep(5000);
-		doneretireassets.click();
-		Thread.sleep(5000);
-		tasks.click();
-		Thread.sleep(2000);
-		createaccounting.click();
-		Thread.sleep(5000);
-		submitretireassets.click();
-		Thread.sleep(4000);
-		okbtn.click();
-		Thread.sleep(3000);
-		assetenquiry.click();
+		Click(doneretireassets);
+		Click(tasks);
+		Click(createaccounting);
+		Click(submitretireassets);
+		Click(okbtn);
+		Click(assetenquiry);
 		assetenquiryassetnumber.sendKeys(assetenquirynum);
-		Thread.sleep(2000);
-		assetenquirysearch.click();
-		Thread.sleep(4000);
-		
-		
+		Click(assetenquirysearch);		
 	}
-	public void View_Accounting() throws InterruptedException
+	public void View_Accounting() 
 	{
-		Thread.sleep(4000);
-		assetenquirytransactions.click();
-		Thread.sleep(7000);
-		viewaccounting.click();
+		Click(assetenquirytransactions);
+		Click(viewaccounting);
 	}
 }

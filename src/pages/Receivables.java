@@ -7,6 +7,10 @@ import org.testng.Assert;
 
 import generics.Utility;
 
+/**
+ * @author dvedagiri
+ *
+ */
 public class Receivables extends BasePage
 {
 		
@@ -110,10 +114,8 @@ public class Receivables extends BasePage
 		quantity.sendKeys(quantityvalue);
 		unitprice.sendKeys(unitpricevalue);*/
 		save.click();
-		Thread.sleep(5000);
-		dropdownmenu.click();
-		Thread.sleep(5000);
-		completeandreview.click();
+		Click(dropdownmenu);
+		Click(completeandreview);
 		String expmsg = statusmessage.getText();
 		Assert.assertEquals("Complete", expmsg);
 	}
