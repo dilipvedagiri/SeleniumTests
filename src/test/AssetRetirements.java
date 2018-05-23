@@ -15,7 +15,7 @@ public class AssetRetirements extends BaseTest
 	@Test
 	public void testAssetRetirements() throws Exception
 	{
-		test=extent.createTest("AssetRetirements", "Executing Asset Retirement Test");
+		test=extent.createTest(this.getClass().getSimpleName(), "Executing Asset Retirement Test");
 		AssetRetirementsPage assetretirementspage= new AssetRetirementsPage(driver);
 		test.log(Status.INFO, "Navigating to Retire Assets");
 		assetretirementspage.NavigatetoRetireAssets();

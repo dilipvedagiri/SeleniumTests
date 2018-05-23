@@ -29,7 +29,7 @@ public class BasePage
 	}
 	public void SendKeys(WebElement element,String data)
 	{
-		wait= new WebDriverWait(driver, 10);
+		wait= new WebDriverWait(driver,10);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		element.clear();
 		element.sendKeys(data);

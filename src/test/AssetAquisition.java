@@ -13,7 +13,7 @@ public class AssetAquisition extends BaseTest
 	@Test
 	public void testAssetAquisition() throws Exception
 	{
-		test=extent.createTest("AssetAquisition", "Executing Asset Aquisition Test");
+		test=extent.createTest(this.getClass().getSimpleName(), "Executing Asset Aquisition Test");
 		AssetAquisitionPage assetaquisitionpage = new AssetAquisitionPage(driver);
 		test.log(Status.INFO, "Navigating to Add Assets");
 		assetaquisitionpage.NavigatetoAddAssets();

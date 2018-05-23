@@ -13,7 +13,7 @@ public class JournalCreation extends BaseTest
 	@Test
 	public void testJournalCreation() throws Exception
 	{
-		test=extent.createTest("JournalCreation", "Executing Journal Creation Test");
+		test=extent.createTest(this.getClass().getSimpleName(), "Executing Journal Creation Test");
 		JournalCreationPage jcpage= new JournalCreationPage(driver);
 		test.log(Status.INFO, "Naviagte to Create Journal");
 		jcpage.NavigatetoCreateJournal();

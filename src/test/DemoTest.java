@@ -15,7 +15,6 @@ public class DemoTest {
 		driver.get("https://www.google.com/");
 		System.out.println("Hello World");
 		driver.quit();
-
 	}
 
 }

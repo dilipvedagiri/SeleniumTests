@@ -1,7 +1,6 @@
 package test;
 
 import org.testng.annotations.Test;
-
 import com.aventstack.extentreports.Status;
 
 public class TestDemo extends BaseTest
@@ -9,8 +8,10 @@ public class TestDemo extends BaseTest
 	@Test
 	public void demotest()
 	{
-		test=extent.createTest("ValidLogin", "Executing Valid Login Tests");
-		System.out.println("Testing");
+		String name = this.getClass().getSimpleName();
+		System.out.println("Class Name is:"+name);
+		test=extent.createTest(name, "Executing Valid Login Tests");
+		System.out.println("Testing");	
 		test.log(Status.INFO,"Logged in");
 		
 	}

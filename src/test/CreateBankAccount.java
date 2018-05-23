@@ -13,7 +13,7 @@ public class CreateBankAccount extends BaseTest
 	@Test
 	public void testCreate_BankAccount() throws Exception
 	{
-		test=extent.createTest("CreateBankAccount", "Executing Create Bank Account Test");
+		test=extent.createTest(this.getClass().getSimpleName(), "Executing Create Bank Account Test");
 		CreateBankAccountPage createbankaccountpage= new CreateBankAccountPage(driver);
 		test.log(Status.INFO, "Navigating to Bank Account");
 		createbankaccountpage.NavigatetoBankAccount();

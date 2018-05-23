@@ -3,13 +3,16 @@ package test;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -35,6 +38,9 @@ public class BaseTest
 	public ExtentTest test;
 	public ExtentHtmlReporter htmlReporter;
 	public WebDriver driver;
+	Capabilities capabilities;
+	String browsername;
+	String browserversion;
 	@BeforeClass
 	public void initReport()
 	{
@@ -44,18 +50,13 @@ public class BaseTest
 		Date date= new Date();
 		String timestamp=sdf.format(date);
 		htmlReporter = new ExtentHtmlReporter("./report/TestReport_"+timestamp+".html");
-		extent.attachReporter(htmlReporter);
-		
-		/*extent.setSystemInfo("OS","Windows 10");
-		extent.setSystemInfo("HostName","DilipKumar");
-		extent.setSystemInfo("Environment Name","QA");
-		extent.setSystemInfo("UserName","DilipKumar");
+		extent.attachReporter(htmlReporter);		
 		
 		// make the charts visible on report open
         htmlReporter.config().setChartVisibilityOnOpen(true);
 		
         htmlReporter.config().setDocumentTitle("Automation Report");
-        htmlReporter.config().setReportName("Regression Suite");*/
+        htmlReporter.config().setReportName("Regression Suite");
         
 	}
 	@BeforeMethod
@@ -66,12 +67,25 @@ public class BaseTest
 		{
 			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
 			driver= new ChromeDriver();
+			capabilities = ((RemoteWebDriver) driver).getCapabilities();
+			browsername = capabilities.getBrowserName();
+			browserversion=capabilities.getVersion();
 		}
 		else if(browser.equalsIgnoreCase("firefox"))
 		{
 			System.setProperty("webdriver.gecko.driver", "./Drivers/geckodriver.exe");
 			driver= new FirefoxDriver();
+			capabilities = ((RemoteWebDriver) driver).getCapabilities();
+			browsername = capabilities.getBrowserName();
+			browserversion=capabilities.getVersion();
 		}
+		
+		Properties prop = System.getProperties();	
+		extent.setSystemInfo("User Name",prop.getProperty("user.name").toUpperCase());
+		extent.setSystemInfo("OS Version",prop.getProperty("os.name").toUpperCase());
+		extent.setSystemInfo("Browser Name",browsername.toUpperCase());
+		extent.setSystemInfo("Browser Version",browserversion.toUpperCase());
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("https://ehci-test.fa.us6.oraclecloud.com/");

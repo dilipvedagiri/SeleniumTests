@@ -4,15 +4,15 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="test.CreateInvoice">
+      <class name="test.TestDemo">
         <methods>
-          <include name="testCreateInvoice"/>
+          <include name="demotest"/>
           <include name="Close_Browser"/>
           <include name="CloseReport"/>
           <include name="initReport"/>
           <include name="initTest"/>
         </methods>
-      </class> <!-- test.CreateInvoice -->
+      </class> <!-- test.TestDemo -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

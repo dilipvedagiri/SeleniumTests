@@ -13,7 +13,7 @@ public class CreateInvoice extends BaseTest
 	@Test
 	public void testCreateInvoice() throws Exception
 	{
-		test=extent.createTest("Create Invoice", "Executing Create Invoice Test");
+		test=extent.createTest(this.getClass().getSimpleName(), "Executing Create Invoice Test");
 		Receivables receivables = new Receivables(driver);
 		test.log(Status.INFO, "Navigate to Receivables");
 		receivables.CreateReceivables();
