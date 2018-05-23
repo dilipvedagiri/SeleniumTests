@@ -13,7 +13,8 @@ public class ManageAdjustment extends BaseTest
 	@Test
 	public void testCreate_BankAccount() throws Exception
 	{
-		test=extent.createTest(this.getClass().getSimpleName(), "Executing Manage Adjustment Test");
+		testCaseName = this.getClass().getSimpleName();
+		test=extent.createTest(testCaseName, "Executing Manage Adjustment Test");
 		ManageAdjustmentPage manageadjustment = new ManageAdjustmentPage(driver);
 		test.log(Status.INFO, "Navigate to Manage Transaction");
 		manageadjustment.NavigatetoManageTransaction();

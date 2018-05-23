@@ -8,10 +8,10 @@ public class TestDemo extends BaseTest
 	@Test
 	public void demotest()
 	{
-		String name = this.getClass().getSimpleName();
-		System.out.println("Class Name is:"+name);
-		test=extent.createTest(name, "Executing Valid Login Tests");
-		System.out.println("Testing");	
+		testCaseName = this.getClass().getSimpleName();
+		System.out.println("Class Name is:"+testCaseName);
+		test=extent.createTest(testCaseName, "Executing Valid Login Tests");
+		System.out.println("Testing Demo");	
 		test.log(Status.INFO,"Logged in");
 		
 	}

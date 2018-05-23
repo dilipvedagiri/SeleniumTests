@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="15784" started-at="2018-05-23T11:33:41Z" finished-at="2018-05-23T11:33:57Z">
+  <suite name="Test Suite" duration-ms="24238" started-at="2018-05-23T13:07:26Z" finished-at="2018-05-23T13:07:51Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="15784" started-at="2018-05-23T11:33:41Z" finished-at="2018-05-23T11:33:57Z">
-      <class name="test.TestDemo">
-        <test-method status="PASS" signature="initReport()[pri:0, instance:test.TestDemo@3e57cd70]" name="initReport" is-config="true" duration-ms="212" started-at="2018-05-23T11:33:41Z" finished-at="2018-05-23T11:33:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initReport -->
-        <test-method status="PASS" signature="initTest(java.lang.String)[pri:0, instance:test.TestDemo@3e57cd70]" name="initTest" is-config="true" duration-ms="14469" started-at="2018-05-23T11:33:41Z" finished-at="2018-05-23T11:33:56Z">
+    <test name="Test Chrome" duration-ms="24238" started-at="2018-05-23T13:07:26Z" finished-at="2018-05-23T13:07:51Z">
+      <class name="test.TestDemoNew">
+        <test-method status="PASS" signature="initTest(java.lang.String)[pri:0, instance:test.TestDemoNew@2c039ac6]" name="initTest" is-config="true" duration-ms="9815" started-at="2018-05-23T13:07:40Z" finished-at="2018-05-23T13:07:50Z">
           <params>
             <param index="0">
               <value>
@@ -22,26 +18,58 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initTest -->
-        <test-method status="PASS" signature="demotest()[pri:0, instance:test.TestDemo@3e57cd70]" name="demotest" duration-ms="15" started-at="2018-05-23T11:33:56Z" finished-at="2018-05-23T11:33:56Z">
+        <test-method status="PASS" signature="demotestnew()[pri:0, instance:test.TestDemoNew@2c039ac6]" name="demotestnew" duration-ms="1" started-at="2018-05-23T13:07:50Z" finished-at="2018-05-23T13:07:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- demotest -->
-        <test-method status="PASS" signature="Close_Browser(org.testng.ITestResult)[pri:0, instance:test.TestDemo@3e57cd70]" name="Close_Browser" is-config="true" duration-ms="708" started-at="2018-05-23T11:33:56Z" finished-at="2018-05-23T11:33:56Z">
+        </test-method> <!-- demotestnew -->
+        <test-method status="PASS" signature="Close_Browser(org.testng.ITestResult)[pri:0, instance:test.TestDemoNew@2c039ac6]" name="Close_Browser" is-config="true" duration-ms="715" started-at="2018-05-23T13:07:50Z" finished-at="2018-05-23T13:07:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=demotest status=SUCCESS method=TestDemo.demotest()[pri:0, instance:test.TestDemo@3e57cd70] output={null}]]]>
+                <![CDATA[[TestResult name=demotestnew status=SUCCESS method=TestDemoNew.demotestnew()[pri:0, instance:test.TestDemoNew@2c039ac6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Close_Browser -->
-        <test-method status="PASS" signature="CloseReport()[pri:0, instance:test.TestDemo@3e57cd70]" name="CloseReport" is-config="true" duration-ms="357" started-at="2018-05-23T11:33:56Z" finished-at="2018-05-23T11:33:57Z">
+      </class> <!-- test.TestDemoNew -->
+      <class name="test.TestDemo">
+        <test-method status="PASS" signature="initReport()[pri:0, instance:test.TestDemo@9a7504c]" name="initReport" is-config="true" duration-ms="221" started-at="2018-05-23T13:07:26Z" finished-at="2018-05-23T13:07:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initReport -->
+        <test-method status="PASS" signature="initTest(java.lang.String)[pri:0, instance:test.TestDemo@9a7504c]" name="initTest" is-config="true" duration-ms="12938" started-at="2018-05-23T13:07:26Z" finished-at="2018-05-23T13:07:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest -->
+        <test-method status="PASS" signature="demotest()[pri:0, instance:test.TestDemo@9a7504c]" name="demotest" duration-ms="14" started-at="2018-05-23T13:07:39Z" finished-at="2018-05-23T13:07:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demotest -->
+        <test-method status="PASS" signature="Close_Browser(org.testng.ITestResult)[pri:0, instance:test.TestDemo@9a7504c]" name="Close_Browser" is-config="true" duration-ms="729" started-at="2018-05-23T13:07:39Z" finished-at="2018-05-23T13:07:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=demotest status=SUCCESS method=TestDemo.demotest()[pri:0, instance:test.TestDemo@9a7504c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close_Browser -->
+        <test-method status="PASS" signature="CloseReport()[pri:0, instance:test.TestDemo@9a7504c]" name="CloseReport" is-config="true" duration-ms="365" started-at="2018-05-23T13:07:51Z" finished-at="2018-05-23T13:07:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseReport -->
       </class> <!-- test.TestDemo -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Test Chrome -->
+  </suite> <!-- Test Suite -->
 </testng-results>
