@@ -101,6 +101,7 @@ public class JournalCreationPage extends BasePage
 	{
 		super(driver);
 	}
+	//Navigate to Journal CReation Page
 	public void NavigatetoCreateJournal() throws InterruptedException
 	{
 		Click(homePagelink);

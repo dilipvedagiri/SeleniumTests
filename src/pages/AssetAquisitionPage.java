@@ -98,6 +98,7 @@ public class AssetAquisitionPage extends BasePage
 	{
 		super(driver);
 	}
+	//Navigate to Add Assets Page
 	public void NavigatetoAddAssets() throws InterruptedException
 	{
 		homePagelink.click();

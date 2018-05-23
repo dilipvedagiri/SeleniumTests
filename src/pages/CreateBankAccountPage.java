@@ -12,6 +12,7 @@ import generics.Utility;
 
 public class CreateBankAccountPage extends BasePage
 {
+	//Declaring Web Elements
 	@FindBy(xpath="//*[@id='pt1:_UIScmil1u::icon']")
 	private WebElement userdropdown;
 	
