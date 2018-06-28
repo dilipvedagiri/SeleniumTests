@@ -109,15 +109,13 @@ public class AssetRetirementsPage extends BasePage
 		String retmntreason=Utility.GetCellValue(xlpath, sheetname, 1, 3);
 		String assetenquirynum=Utility.GetCellValue(xlpath, sheetname, 1, 4);
 		
-		Thread.sleep(3000);
-		assetnumber.sendKeys(assetnum);
+		SendKeys(assetnumber, assetnum);
 		Click(searchbtn);
 		Click(retirecost);
-		Thread.sleep(3000);
-		costretired.sendKeys(costretiredvalue);
+		SendKeys(costretired, costretiredvalue);
 		costofremoval.sendKeys(costremovalvalue);
 		SelectByVisibleText(retirementreason, retmntreason);
-		submitbtn.click();
+		Click(submitbtn);
 		Click(doneretireassets);
 		Click(tasks);
 		Click(createaccounting);

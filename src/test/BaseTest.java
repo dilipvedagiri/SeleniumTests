@@ -1,6 +1,7 @@
 package test;
 
 import java.io.IOException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
@@ -27,7 +28,6 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import generics.Screenshots;
-import pages.LoginPage;
 
 /**Base Test Containing initializing Extent Report Parameterise Browser and Log the Status of the Test to the report
  * @author dvedagiri
@@ -92,9 +92,11 @@ public class BaseTest
 		}	
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("https://ehci-test.fa.us6.oraclecloud.com/");
+		
+		driver.get("http://demo.automationtesting.in/Register.html");
+		/*driver.get("https://ehci-test.fa.us6.oraclecloud.com/");
 		LoginPage loginpage= new LoginPage(driver);
-		loginpage.Login();	
+		loginpage.Login();	*/
 	}
 	@AfterMethod
 	public void Close_Browser(ITestResult result)

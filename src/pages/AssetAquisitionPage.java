@@ -7,6 +7,7 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.annotations.DataProvider;
 
 import generics.Utility;
 
@@ -111,9 +112,29 @@ public class AssetAquisitionPage extends BasePage
 		Click(tasks);
 		Click(addasset);
 	}
-	public void Add_Assets() throws InterruptedException, EncryptedDocumentException, InvalidFormatException, IOException
+	@DataProvider(name="addAssets")
+	public Object[][] getassetdata() throws EncryptedDocumentException, InvalidFormatException, IOException 
 	{
-		String majcategry=Utility.GetCellValue(xlpath, sheetname, 1, 0);
+		Object[][] data= new Object[1][11];
+		data[1][0]=Utility.GetCellValue(xlpath, sheetname, 1, 0);
+		data[1][1]=Utility.GetCellValue(xlpath, sheetname, 1, 1);
+		data[1][2]=Utility.GetCellValue(xlpath, sheetname, 1, 2);
+		data[1][3]=Utility.GetCellValue(xlpath, sheetname, 1, 3);
+		data[1][4]=Utility.GetCellValue(xlpath, sheetname, 1, 4);
+		data[1][5]=Utility.GetCellValue(xlpath, sheetname, 1, 5);
+		data[1][6]=Utility.GetCellValue(xlpath, sheetname, 1, 6);
+		data[1][7]=Utility.GetCellValue(xlpath, sheetname, 1, 7);
+		data[1][8]=Utility.GetCellValue(xlpath, sheetname, 1, 8);
+		data[1][0]=Utility.GetCellValue(xlpath, sheetname, 1, 9);
+		data[1][10]=Utility.GetCellValue(xlpath, sheetname, 1, 10);
+		data[1][11]=Utility.GetCellValue(xlpath, sheetname, 1,11);
+		return data;
+		
+	}
+	public void Add_Assets(String majcategry,String mincategry,String desc,String costval,String expacc,String cntry,
+			String statevalue,String cityvalue,String insrvcdate,String assrtkey,String empname,String descenquiry) throws InterruptedException 
+	{
+		/*String majcategry=Utility.GetCellValue(xlpath, sheetname, 1, 0);
 		String mincategry=Utility.GetCellValue(xlpath, sheetname, 1, 1);
 		String desc=Utility.GetCellValue(xlpath, sheetname, 1, 2);
 		String costval=Utility.GetCellValue(xlpath, sheetname, 1, 3);
@@ -124,7 +145,7 @@ public class AssetAquisitionPage extends BasePage
 		String insrvcdate=Utility.GetCellValue(xlpath, sheetname, 1, 8);
 		String assrtkey=Utility.GetCellValue(xlpath, sheetname, 1, 9);
 		String empname=Utility.GetCellValue(xlpath, sheetname, 1, 10);
-		String descenquiry=Utility.GetCellValue(xlpath, sheetname, 1,11);
+		String descenquiry=Utility.GetCellValue(xlpath, sheetname, 1,11);*/
 		
 		Click(categoryicon);
 		Thread.sleep(7000);
@@ -154,5 +175,6 @@ public class AssetAquisitionPage extends BasePage
 		Thread.sleep(3000);
 		descriptionenquiry.sendKeys(descenquiry);
 		Click(assetenquirysearch);
+		ActionsGeneric(submit);
 	}
 }

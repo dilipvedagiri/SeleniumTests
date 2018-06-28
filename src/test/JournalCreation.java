@@ -16,13 +16,12 @@ public class JournalCreation extends BaseTest
 		testCaseName = this.getClass().getSimpleName();
 		test=extent.createTest(testCaseName, "Executing Journal Creation Test");
 		JournalCreationPage jcpage= new JournalCreationPage(driver);
-		test.log(Status.INFO, "Naviagte to Create Journal");
+		test.log(Status.INFO, "Navigate to Create Journal");
 		jcpage.NavigatetoCreateJournal();
 		test.log(Status.INFO, "Enter required fields in Create Journal");
-		//jcpage.Create_Journal();
-		test.log(Status.INFO, "Navigate to Manage Journal and Pot Journal created");
-		//jcpage.Manage_Journal();
-		
+		jcpage.Create_Journal();
+		test.log(Status.INFO, "Navigate to Manage Journal and Post Journal created");
+		jcpage.Manage_Journal();
 	}
 
 }

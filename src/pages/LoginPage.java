@@ -39,7 +39,7 @@ public class LoginPage extends BasePage
 		System.out.println(Password);
 		username.sendKeys(Username);
 		password.sendKeys(Password);
-		//Signin.click();
+		Signin.click();
 	}
 	
 	public void CloseBrowser()

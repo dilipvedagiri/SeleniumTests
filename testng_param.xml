@@ -1,0 +1,8 @@
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <parameter name="browser_name" value="chrome"/>
+  <classes>
+  <class name="practice.ParameterTest"/>
+  </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

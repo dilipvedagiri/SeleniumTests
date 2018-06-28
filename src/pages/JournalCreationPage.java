@@ -7,6 +7,8 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import generics.Reusable;
 import generics.Utility;
 
 /**
@@ -108,6 +110,8 @@ public class JournalCreationPage extends BasePage
 	//Navigate to Journal CReation Page
 	public void NavigatetoCreateJournal() throws InterruptedException
 	{
+		Reusable re= new Reusable(driver);
+		re.GenericActions(search);
 		Click(homePagelink);
 		Click(generalaccounting);
 		Click(journals);
@@ -142,17 +146,16 @@ public class JournalCreationPage extends BasePage
 		creditdescription.sendKeys(creditdescvalue);
 		savebtn.click();
 		Click(complete);
-		cancel.click();
+		Click(cancel);
 	}
 	public void Manage_Journal() throws InterruptedException, EncryptedDocumentException, InvalidFormatException, IOException
 	{
 		String journalname=Utility.GetCellValue(xlpath, sheetname, 1, 0);
 		Click(tasks);
 		Click(managejournals);
-		Thread.sleep(3000);
-		journalbatch.sendKeys(journalname);
-		search.click();
-		journalinmanagejournal.click();
-		postjournal.click();
+		SendKeys(journalbatch, journalname);
+		Click(search);
+		Click(journalinmanagejournal);
+		Click(postjournal);
 	}
 }

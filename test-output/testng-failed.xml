@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Test Suite]">
-  <test thread-count="5" name="Test Chrome(failed)">
-    <parameter name="browser" value="chrome"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.TestDemoNew">
+      <class name="practice.GridTest">
         <methods>
-          <include name="Close_Browser"/>
-          <include name="CloseReport"/>
-          <include name="initReport"/>
-          <include name="demotestnew"/>
-          <include name="initTest"/>
+          <include name="testgridTest"/>
         </methods>
-      </class> <!-- test.TestDemoNew -->
+      </class> <!-- practice.GridTest -->
     </classes>
-  </test> <!-- Test Chrome(failed) -->
-</suite> <!-- Failed suite [Test Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Test Suite" parallel="none">
+<suite name="Test Suite" parallel="tests">
   <test  name="Test Chrome">
   <parameter name="browser" value="chrome"/>
     <classes>
-    	<class name="test.TestDemo"/>
-    	<class name="test.TestDemoNew"/>
+    	<class name="test.BrowsersTest"/>
     </classes>
   </test> <!-- Test -->
-  
+  <test  name="Test Chrome">
+  <parameter name="browser" value="chrome"/>
+    <classes>
+    	<class name="test.BrowsersTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test  name="Test Chrome">
+  <parameter name="browser" value="chrome"/>
+    <classes>
+    	<class name="test.BrowsersTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test  name="Test Chrome">
+  <parameter name="browser" value="chrome"/>
+    <classes>
+    	<class name="test.BrowsersTest"/>
+    </classes>
+  </test> <!-- Test -->
 </suite> <!-- Suite -->

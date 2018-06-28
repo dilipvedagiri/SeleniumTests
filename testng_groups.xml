@@ -1,0 +1,12 @@
+<suite name="Suite">
+  <test  name="Test">
+	<groups>
+		<run>
+			<exclude name="regression"/>
+		</run>>
+	</groups>
+   	<classes>
+      <class name="practice.GroupTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
